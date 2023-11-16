@@ -1,0 +1,87 @@
+{
+  "name": "editor-v2",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --mode development --watch",
+    "build:dev": "NODE_ENV=development webpack --mode development",
+    "build:prod": "NODE_ENV=production webpack --mode production",
+    "lint": "prettier --write './src/**/*.{ts,tsx,css}'; eslint --fix --ext .ts,.tsx src/"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@reduxjs/toolkit": "^1.7.0",
+    "@types/pica": "^5.1.3",
+    "ace-builds": "^1.4.13",
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "image-extensions": "^1.1.0",
+    "is-url": "^1.2.4",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "pica": "^9.0.1",
+    "react": "^17.0.1",
+    "react-ace": "^9.5.0",
+    "react-autosize-textarea": "^7.1.0",
+    "react-dom": "^17.0.1",
+    "react-dropzone": "^11.3.4",
+    "react-easy-crop": "^3.5.2",
+    "react-icons": "^4.3.1",
+    "react-image-crop": "^9.0.5",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-redux": "^7.2.6",
+    "react-select": "^5.2.1",
+    "slate": "^0.71.0",
+    "slate-history": "^0.66.0",
+    "slate-hyperscript": "^0.67.0",
+    "slate-react": "^0.71.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-transform-runtime": "^7.13.9",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/preset-react": "^7.12.13",
+    "@types/is-url": "^1.2.30",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/uuid": "^8.3.3",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.7",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.5",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.24.3",
+    "webpack-build-notifier": "^2.3.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
